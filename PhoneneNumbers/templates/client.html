@@ -1,0 +1,12 @@
+{% block content %}
+
+{% for client in clients %}
+    <div>
+        <h3>{{ client.name }}</h3>
+        <h3>{{ client.phone }}</h3>
+        <button type="button" formaction="update/" formmethod="post">Редактировать</button>
+        <button type="button" formaction="delete/" onclick="return confirm('Удалить контакт?')" URL >Удалить</button>
+    </div>
+{% endfor %}
+
+{% endblock %}

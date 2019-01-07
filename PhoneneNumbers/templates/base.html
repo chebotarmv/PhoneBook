@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Client site</title>
+ </head>
+ <body>
+ <h3>Простой телефонный справочник.</h3>
+ <h4>На сайте вы можете найти клиента.</h4>
+ <form id="searchform" action="search/" method="get">
+    <input type="text" name="name" type="text"/>
+    <button type="button" onclick="searchform.submit()">Search</button>
+</form>
+ <h4>Изменить его или удалить.</h4>
+ <h4>А также <a href="create_client">создать<a/> нового.</h4>
+ <h3>Также, на сайте по данным операциям доступен простой API</h3>
+ <h4>clients/ - Получить список клиентов.</h4>
+ <h4>clients/name/ (Замените name на имя клиента) - Получить детали по клиенту. </h4>
+ <div>
+     {% block content %}
+     {% endblock %}
+ </div>
+ </body>
